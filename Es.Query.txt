@@ -1,0 +1,15 @@
+1.	{isActive:{$eq:true}} -> results: 51 items;
+
+2.	{age:{$gt: 26}} -> results: 54 items;
+
+3.	{$and:[{age:{$gt:26}, age:{$lte:30}}]} -> results: 62 items;
+
+4. 	{$or:[{eyeColor: "brown", eyeColor:"blue"}]} -> results: 31 items;
+
+5. 	{eyeColor:{$ne:"green"}} -> results: 66 items;
+	{eyeColor:{$not:{$eq:"green"}}} -> results: 66 items;
+
+6.	{$and:[{eyeColor:{$not:{$eq:"green"}}, eyeColor:{$not:{$eq:"blue"}}}]} -> results: 66 items;
+	{$and:[{eyeColor:{$ne:"green"}, eyeColor:{$ne:"blue"}}]} -> results: 66 items;
+
+7.	{company:{$eq:"FITCORE"}} -> results: 1 item;
